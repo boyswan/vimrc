@@ -9,6 +9,8 @@ set showmatch
 set incsearch
 set hlsearch
 set noswapfile
+set nohlsearch
+set clipboard=unnamed
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/vim-airline/plugin/airline.vim
@@ -22,13 +24,14 @@ Plug 'reasonml-editor/vim-reason'
 Plug 'sheerun/vim-polyglot'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'kien/ctrlp.vim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 call plug#end()
 
 
 map <silent> <C-n> :NERDTreeFocus<CR>
 map <silent> <C-p> :ReasonPrettyPrint<CR>
 map <C-t> <Esc>:bnext<CR>
-map <C-k> :NERDTreeToggle<CR>
+map <C-b> :NERDTreeToggle<CR>
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/* 
 set backspace=indent,eol,start
